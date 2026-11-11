@@ -118,16 +118,15 @@
     <!-- ============ OFFERINGS ============ -->
     <section class="section" id="offerings">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="off.eyebrow">Ponúkam</p>
-          <h2 data-i18n="off.title">Individuálne konzultácie pod supervíziou</h2>
+        <h2 class="eyebrow reveal" data-i18n="off.eyebrow">Ponúkam</h2>
+        <div class="offer-intro reveal">
           <p data-i18n="off.lead">Som psychologička a ponúkam individuálne konzultácie pod supervíziou pre dospelých a dospievajúcich v Bratislave.</p>
-        </header>
+          <p data-i18n="off.approach">Môj prístup má korene v jungiánskej psychoterapii a smere Otvorený dialóg.</p>
+        </div>
 
-        <p class="approach-intro reveal" data-i18n="off.approach">Môj prístup má korene v jungiánskej psychoterapii a smere Otvorený dialóg.</p>
-
-        <div class="card-grid two">
+        <div class="offer-cards">
           <article class="card reveal">
+            <span class="card-num" aria-hidden="true">01</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18 4.5 4.5 0 0 1 0-9 4.5 4.5 0 0 0 0-9z"/></svg>
             </div>
@@ -135,6 +134,7 @@
             <p data-i18n="off.c1.d">Jungiánsky orientovaná psychoterapia pristupuje k vnútornému svetu človeka s hlbokou úctou a kladie dôraz na rešpekt k hľadaniu vlastnej cesty každého z nás. Duševné a telesné symptómy chápe ako volanie duše vydať sa k hľadaniu rovnováhy medzi vonkajším a vnútorným, k hľadaniu dialógu medzi vedomím a nevedomím.</p>
           </article>
           <article class="card reveal">
+            <span class="card-num" aria-hidden="true">02</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8 11h8M8 14h5"/></svg>
             </div>
@@ -265,8 +265,46 @@
         <header class="section-head reveal">
           <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
           <h2 data-i18n="contact.title">Objednanie</h2>
-          <p data-i18n="contact.lead">Objednanie je možné prostredníctvom e-mailu alebo na telefónnom čísle.</p>
+          <p data-i18n="contact.lead">Objednanie je možné prostredníctvom formulára, e-mailu alebo na telefónnom čísle.</p>
         </header>
+
+        <div class="contact-grid">
+        <form class="contact-form reveal" action="https://formsubmit.co/ajax/t.sedlakova@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nová správa z webu tanagarajova">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Meno a priezvisko</label>
+            <input id="f-name" name="meno" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email" data-i18n="form.email">E-mail</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-phone" data-i18n="form.phone">Telefón (nepovinné)</label>
+              <input id="f-phone" name="telefon" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type" data-i18n="form.type">Mám záujem o</label>
+            <select id="f-type" name="typ">
+              <option value="osobne" data-i18n="form.type1">Osobnú konzultáciu</option>
+              <option value="online" data-i18n="form.type2">Online konzultáciu</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="form.msg">Správa</label>
+            <textarea id="f-msg" name="sprava" rows="5" required></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="suhlas" value="áno" required>
+            <span data-i18n="form.consent">Súhlasím so spracovaním osobných údajov za účelom odpovede na moju správu.</span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Odoslať správu</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
 
         <div class="contact-cta reveal">
           <a class="contact-big" href="mailto:t.sedlakova@gmail.com">
@@ -277,6 +315,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
             <span><span class="label" data-i18n="contact.phone">Telefón</span>+421 907 202 488</span>
           </a>
+        </div>
         </div>
 
         <h3 class="places-title reveal" data-i18n="contact.places">Kde ma nájdete</h3>

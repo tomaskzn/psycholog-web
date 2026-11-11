@@ -122,6 +122,70 @@ if (natureBand && natureImg && !reduceMotion) {
 }
 
 /* =========================================================
+   Contact form (sent to her e-mail via FormSubmit)
+   ========================================================= */
+const form = document.querySelector(".contact-form");
+const statusEl = form.querySelector(".form-status");
+const submitBtn = form.querySelector('button[type="submit"]');
+
+function setStatus(key, type) {
+  // data-i18n keeps the message in sync when the language is switched
+  if (key) statusEl.dataset.i18n = key;
+  else delete statusEl.dataset.i18n;
+  statusEl.textContent = key ? t(key) : "";
+  statusEl.className = "form-status" + (type ? " " + type : "");
+}
+
+function validate() {
+  let ok = true;
+  form.querySelectorAll("[required]").forEach(input => {
+    const valid = input.type === "checkbox" ? input.checked : input.checkValidity() && input.value.trim() !== "";
+    const target = input.type === "checkbox" ? input.closest(".checkbox") : input;
+    target.classList.toggle("invalid", !valid);
+    input.setAttribute("aria-invalid", String(!valid));
+    if (!valid) ok = false;
+  });
+  return ok;
+}
+
+form.addEventListener("input", e => {
+  if (e.target.matches(".invalid, [aria-invalid='true']")) validate();
+});
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+
+  if (!validate()) {
+    setStatus("form.invalid", "err");
+    form.querySelector("input.invalid, textarea.invalid, .checkbox.invalid input")?.focus();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.dataset.i18n = "form.sending";
+  submitBtn.textContent = t("form.sending");
+  setStatus("");
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || String(data.success) === "false") throw new Error(data.message || res.statusText);
+    form.reset();
+    setStatus("form.ok", "ok");
+  } catch (err) {
+    setStatus("form.err", "err");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.dataset.i18n = "form.submit";
+    submitBtn.textContent = t("form.submit");
+  }
+});
+
+/* =========================================================
    Footer year
    ========================================================= */
 document.getElementById("year").textContent = new Date().getFullYear();

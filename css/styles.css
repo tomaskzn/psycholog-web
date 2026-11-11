@@ -72,7 +72,7 @@ h1, h2, h3 {
   letter-spacing: -.025em;
 }
 h1 { font-size: clamp(2.6rem, 6.4vw, 4.7rem); font-weight: 800; letter-spacing: -.035em; }
-h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.85rem, 5vw, 3.4rem); }
 h3 { font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
 
 p { margin: 0 0 1em; }
@@ -444,16 +444,44 @@ body.nav-open { overflow: hidden; }
   border-radius: var(--radius-lg);
   margin-inline: var(--panel-gap);
 }
-.section-head { max-width: 720px; margin: 0 0 3rem; }
-.section-head p:last-child { color: var(--ink-soft); font-size: 1.08rem; margin-bottom: 0; }
+.section-head { max-width: 720px; margin: 0 0 2.25rem; }
+.section-head h2 { text-wrap: balance; }
+.section-head p:last-child { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0; max-width: 34rem; text-wrap: pretty; }
 
 /* Offerings */
-.approach-intro {
-  font-family: var(--font-head); font-weight: 600;
-  font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.3; letter-spacing: -.02em;
-  max-width: 40rem; margin-bottom: 1.5rem;
+/* Intro panel: two columns split by a line, set apart from the cards below */
+h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
+.offer-intro {
+  display: grid;
+  margin-bottom: 2.5rem;
 }
-.card-grid { display: grid; gap: 1rem; }
+.offer-intro p {
+  margin: 0;
+  padding: 1.25rem 0;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.4;
+  letter-spacing: -.015em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.offer-intro p:first-child { padding-top: 0; }
+.offer-intro p + p {
+  border-top: 2px solid var(--accent);
+  color: var(--green-700);
+}
+.offer-cards { display: grid; gap: 1rem; }
+
+.card-num {
+  position: absolute; top: 1.5rem; right: 1.75rem;
+  font-family: var(--font-head); font-weight: 800;
+  font-size: 2.6rem; line-height: 1; letter-spacing: -.05em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #cfc9ba;
+  transition: color .4s, -webkit-text-stroke-color .4s;
+}
+.card:hover .card-num { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
 .card {
   position: relative;
   overflow: hidden;
@@ -669,6 +697,46 @@ body.nav-open { overflow: hidden; }
 .cancel-note p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
 
 /* Contact */
+.contact-grid { display: grid; gap: 1rem; align-items: start; }
+.contact-form {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+.field { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.1rem; flex: 1; }
+.field-row { display: flex; flex-direction: column; gap: 0 1rem; }
+.field label { font-weight: 600; font-size: .88rem; color: var(--ink); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  font: inherit; color: var(--ink);
+  padding: .9rem 1rem;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color .2s, box-shadow .2s;
+}
+.field textarea { resize: vertical; min-height: 130px; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: #c9c3b2; }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .3);
+}
+.field .invalid, .checkbox.invalid input { border-color: #b03a2e; }
+.checkbox.invalid span { color: #b03a2e; }
+.checkbox {
+  display: flex; gap: .7rem; align-items: flex-start;
+  font-size: .88rem; color: var(--ink-soft);
+  margin-bottom: 1.4rem; cursor: pointer;
+}
+.checkbox input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--green-700); flex: none; }
+.btn-block { width: 100%; }
+.btn[disabled] { opacity: .7; cursor: wait; transform: none; }
+.form-status { margin: 1rem 0 0; font-size: .92rem; min-height: 1.2em; }
+.form-status.ok { color: var(--green-500); font-weight: 600; }
+.form-status.err { color: #b03a2e; }
+
 .contact-cta { display: grid; gap: 1rem; }
 .contact-big {
   display: flex; align-items: center; gap: 1.25rem;
@@ -748,9 +816,11 @@ body.nav-open { overflow: hidden; }
    ========================================================= */
 @media (min-width: 640px) {
   :root { --gutter: 32px; --panel-gap: 16px; }
-  .card-grid.two { grid-template-columns: repeat(2, 1fr); }
   .info-tiles { grid-template-columns: repeat(3, 1fr); }
+  .offer-cards { grid-template-columns: repeat(2, 1fr); }
   .contact-cta { grid-template-columns: repeat(2, 1fr); }
+  .field-row { flex-direction: row; }
+  .contact-form { padding: 2.25rem; }
   .address-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-bottom { flex-direction: row; justify-content: space-between; }
   .hero-panel { padding: 4rem 0 4.5rem; }
@@ -766,6 +836,11 @@ body.nav-open { overflow: hidden; }
   .about-grid { grid-template-columns: 5fr 7fr; gap: 4.5rem; }
   .about-photo { position: sticky; top: calc(var(--header-h) + 2rem); max-width: none; }
   .offer-extra { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1.4fr 1fr; gap: 1.5rem; }
+  .contact-grid .contact-cta { grid-template-columns: 1fr; }
+  .offer-intro { grid-template-columns: 1fr 1fr; margin-bottom: 3rem; }
+  .offer-intro p { padding: 0 2.5rem 0 0; }
+  .offer-intro p + p { border-top: 0; border-left: 2px solid var(--accent); padding: 0 0 0 2.5rem; }
   .journey { padding: 3rem; }
   .nature-band { min-height: 600px; }
 }
@@ -800,7 +875,8 @@ body.nav-open { overflow: hidden; }
 
   .hero-panel { padding: 5rem 0 5.5rem; min-height: calc(100vh - var(--header-h) - var(--panel-gap)); display: flex; align-items: center; }
   .hero-inner { grid-template-columns: 1.4fr .6fr; gap: 4.5rem; }
-  .section-head { max-width: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 4rem; align-items: end; }
+  .section-head { max-width: none; display: grid; grid-template-columns: 1.45fr 1fr; column-gap: 4rem; align-items: end; }
+  .section-head h2 { font-size: clamp(2.4rem, 3.6vw, 3.1rem); }
   .section-head .eyebrow { grid-column: 1 / -1; justify-self: start; }
   .section-head h2 { margin: 0; }
   .section-head p:last-child { padding-bottom: .4rem; }
