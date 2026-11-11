@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520">
+  <!-- PLACEHOLDER portrait – replace with a real photo (e.g. assets/portrait.jpg) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4f1ea"/>
+      <stop offset="1" stop-color="#bfe3d0"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17463e"/>
+      <stop offset="1" stop-color="#0e2f2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="520" fill="url(#bg)"/>
+  <circle cx="330" cy="110" r="70" fill="#ff7849" opacity=".85"/>
+  <path d="M40 380c30-60 90-90 170-90s140 30 170 90v140H40z" fill="url(#shirt)"/>
+  <path d="M175 290h70v40c0 18-16 32-35 32s-35-14-35-32z" fill="#e8c4a8"/>
+  <ellipse cx="210" cy="215" rx="72" ry="86" fill="#efcfb4"/>
+  <path d="M138 200c-6-60 34-98 82-96 46 2 76 40 66 98-8-30-30-50-70-50-38 0-64 20-78 48z" fill="#3b2c22"/>
+  <path d="M185 330l25 30 25-30" fill="none" stroke="#ff7849" stroke-width="6" stroke-linejoin="round"/>
+</svg>
