@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- PLACEHOLDER nature photo – replace with a real photo (e.g. assets/nature.jpg) -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3dfa6"/>
+      <stop offset=".55" stop-color="#e9c46a"/>
+      <stop offset="1" stop-color="#cfa13a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1120" cy="300" r="120" fill="#fbefc8" opacity=".9"/>
+  <path d="M0 520 C200 440 360 470 520 430 S860 360 1040 420 1380 380 1600 430 V900 H0Z" fill="#7e9a6c"/>
+  <path d="M0 600 C180 540 340 580 520 540 S880 480 1060 540 1400 500 1600 550 V900 H0Z" fill="#4f7356"/>
+  <path d="M0 690 C220 640 380 680 560 640 S900 600 1100 650 1420 620 1600 660 V900 H0Z" fill="#2e5a40"/>
+  <g fill="#1d3f2b">
+    <path d="M90 760 l40-150 40 150z"/><path d="M150 770 l50-190 50 190z"/><path d="M240 760 l36-130 36 130z"/>
+    <path d="M1250 760 l44-170 44 170z"/><path d="M1320 770 l54-210 54 210z"/><path d="M1420 760 l40-150 40 150z"/>
+    <path d="M1500 770 l46-180 46 180z"/>
+  </g>
+  <path d="M0 760 C260 720 460 760 700 730 S1180 700 1600 740 V900 H0Z" fill="#163322"/>
+</svg>

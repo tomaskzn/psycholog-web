@@ -103,82 +103,23 @@ if (heroPanel && !reduceMotion && window.matchMedia("(pointer: fine)").matches) 
 }
 
 /* =========================================================
-   FAQ: keep only one item open at a time
+   Gentle parallax on the nature photo
    ========================================================= */
-const faqItems = document.querySelectorAll(".faq-list details");
-faqItems.forEach(item => {
-  item.addEventListener("toggle", () => {
-    if (!item.open) return;
-    faqItems.forEach(other => { if (other !== item) other.open = false; });
-  });
-});
-
-/* =========================================================
-   Contact form (Formspree)
-   ========================================================= */
-const form = document.querySelector(".contact-form");
-const statusEl = form.querySelector(".form-status");
-const submitBtn = form.querySelector('button[type="submit"]');
-
-function setStatus(key, type) {
-  // data-i18n keeps the message in sync when the language is switched
-  if (key) statusEl.dataset.i18n = key;
-  else delete statusEl.dataset.i18n;
-  statusEl.textContent = key ? t(key) : "";
-  statusEl.className = "form-status" + (type ? " " + type : "");
+const natureBand = document.querySelector(".nature-band");
+const natureImg = document.querySelector(".nature-img");
+if (natureBand && natureImg && !reduceMotion) {
+  let ticking = false;
+  const update = () => {
+    const r = natureBand.getBoundingClientRect();
+    const progress = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+    natureImg.style.transform = `translateY(${Math.max(-1, Math.min(1, progress)) * -36}px)`;
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
 }
-
-function validate() {
-  let ok = true;
-  form.querySelectorAll("[required]").forEach(input => {
-    const valid = input.type === "checkbox" ? input.checked : input.checkValidity() && input.value.trim() !== "";
-    const target = input.type === "checkbox" ? input.closest(".checkbox") : input;
-    target.classList.toggle("invalid", !valid);
-    input.setAttribute("aria-invalid", String(!valid));
-    if (!valid) ok = false;
-  });
-  return ok;
-}
-
-form.addEventListener("input", e => {
-  if (e.target.matches(".invalid, [aria-invalid='true']")) validate();
-});
-
-form.addEventListener("submit", async e => {
-  e.preventDefault();
-
-  if (!validate()) {
-    setStatus("form.invalid", "err");
-    form.querySelector(".invalid input, input.invalid, textarea.invalid")?.focus();
-    return;
-  }
-
-  if (form.action.includes("YOUR_FORM_ID")) {
-    setStatus("form.notConfigured", "err");
-    return;
-  }
-
-  const label = submitBtn.textContent;
-  submitBtn.disabled = true;
-  submitBtn.textContent = t("form.sending");
-  setStatus("");
-
-  try {
-    const res = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
-    });
-    if (!res.ok) throw new Error(res.statusText);
-    form.reset();
-    setStatus("form.ok", "ok");
-  } catch (err) {
-    setStatus("form.err", "err");
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = label;
-  }
-});
 
 /* =========================================================
    Footer year

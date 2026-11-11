@@ -2,19 +2,20 @@
   <!-- PLACEHOLDER portrait – replace with a real photo (e.g. assets/portrait.jpg) -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e4f1ea"/>
-      <stop offset="1" stop-color="#bfe3d0"/>
+      <stop offset="0" stop-color="#e9efe1"/>
+      <stop offset="1" stop-color="#cfe0c3"/>
     </linearGradient>
-    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#17463e"/>
-      <stop offset="1" stop-color="#0e2f2a"/>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#24503a"/>
+      <stop offset="1" stop-color="#163322"/>
     </linearGradient>
   </defs>
   <rect width="420" height="520" fill="url(#bg)"/>
-  <circle cx="330" cy="110" r="70" fill="#ff7849" opacity=".85"/>
-  <path d="M40 380c30-60 90-90 170-90s140 30 170 90v140H40z" fill="url(#shirt)"/>
-  <path d="M175 290h70v40c0 18-16 32-35 32s-35-14-35-32z" fill="#e8c4a8"/>
-  <ellipse cx="210" cy="215" rx="72" ry="86" fill="#efcfb4"/>
-  <path d="M138 200c-6-60 34-98 82-96 46 2 76 40 66 98-8-30-30-50-70-50-38 0-64 20-78 48z" fill="#3b2c22"/>
-  <path d="M185 330l25 30 25-30" fill="none" stroke="#ff7849" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="330" cy="110" r="70" fill="#e0a526" opacity=".9"/>
+  <path d="M120 160c0-60 40-96 90-96s90 36 90 96v170H120z" fill="#4a3426"/>
+  <path d="M40 390c30-60 90-88 170-88s140 28 170 88v130H40z" fill="url(#top)"/>
+  <path d="M180 286h60v36c0 16-14 28-30 28s-30-12-30-28z" fill="#e8c4a8"/>
+  <ellipse cx="210" cy="210" rx="66" ry="80" fill="#efcfb4"/>
+  <path d="M144 196c4-52 34-84 70-84 40 0 64 30 62 78-20-26-52-40-84-40-20 0-36 18-48 46z" fill="#4a3426"/>
+  <circle cx="210" cy="352" r="7" fill="#e0a526"/>
 </svg>

@@ -1,13 +1,14 @@
-# Psychologist website (SK / EN)
+# Mgr. Táňa Garajová, PhD. – website (SK / EN)
 
-Static one-page site, plain HTML/CSS/JS. No build step, so it can be hosted anywhere.
+Static one-page site, plain HTML/CSS/JS. No build step.
+Live: https://tomaskzn.github.io/psycholog-web/
 
 ```
-index.html        page structure (all sections)
-css/styles.css    design (colors at the top in :root)
+index.html        page structure (sections: Ponúkam, O mne, Priebeh konzultácií, Kontakt)
+css/styles.css    design (colors at the top in :root – forest green + mustard)
 js/i18n.js        ALL texts, Slovak + English
-js/main.js        menu, animations, FAQ, contact form
-assets/           favicon + placeholder portrait
+js/main.js        menu, animations
+assets/           favicon + placeholder portrait and nature images
 ```
 
 ## Preview locally
@@ -18,25 +19,24 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000
 
-## Replace the placeholder content
+## Still to do
 
-Everything marked below is placeholder text (name "Mgr. Ján Novák", phone, e-mail, address, prices, CV).
+1. **Photos**: put a portrait (portrait orientation, ~840×1040 px) and a wide nature photo (~2000×1200 px) into `assets/`.
+   - Portrait: replace `assets/portrait.svg` in `index.html` (2 places).
+   - Nature photo: replace `assets/nature.svg` in `css/styles.css` (`.nature-img`).
+2. **Online consultations**: the tool (Zoom / Jitsi) is not decided yet, so the site only says "online".
+3. **Domain**: once www.tanagarajova.com is bought, it can be connected to GitHub Pages (Settings → Pages → Custom domain).
 
-1. **Texts**: edit `js/i18n.js`. Each key has a Slovak (`sk`) and English (`en`) version.
-2. **Name, phone, e-mail, address, prices, years in the timeline**: these are written directly in `index.html` (search for `Ján Novák`, `+421`, `info@`, `Obchodná`, `€`). Also update the name in `meta.title` in `js/i18n.js`.
-3. **Photo**: put the photo in `assets/` (e.g. `portrait.jpg`, portrait orientation, ~840×1040 px) and replace `assets/portrait.svg` in `index.html` (2 places).
-4. **Map**: on https://www.openstreetmap.org find the address → Share → HTML, copy the `src` URL into the `<iframe>` in the contact section.
-5. **Contact form**: create a free form at https://formspree.io, then replace `YOUR_FORM_ID` in the `<form action="…">`. Until then the form shows a "not connected yet" message.
-6. **Colors**: change the variables at the top of `css/styles.css`.
+## Editing texts
+
+- All texts are in `js/i18n.js`, Slovak (`sk`) and English (`en`) side by side.
+- The name, e-mail, phone and addresses are written directly in `index.html`.
 
 ## Language
 
 - Switch with SK / EN in the header. The choice is remembered.
 - Direct links: `?lang=sk` or `?lang=en`.
-- First visit: Slovak/Czech browsers get SK, everyone else EN.
 
-## Deploy (free)
+## Publishing
 
-- **Netlify**: drag the whole folder onto https://app.netlify.com/drop
-- **GitHub Pages**: push the folder to a repository → Settings → Pages.
-- Any regular webhost: upload all files via FTP.
+Pushing to the `main` branch on GitHub updates the live site in about a minute.
