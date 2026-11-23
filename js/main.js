@@ -87,22 +87,6 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 }
 
 /* =========================================================
-   Hero glow follows the pointer
-   ========================================================= */
-const heroPanel = document.querySelector(".hero-panel");
-if (heroPanel && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-  let frame;
-  heroPanel.addEventListener("pointermove", e => {
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(() => {
-      const r = heroPanel.getBoundingClientRect();
-      heroPanel.style.setProperty("--mx", `${((e.clientX - r.left) / r.width) * 100}%`);
-      heroPanel.style.setProperty("--my", `${((e.clientY - r.top) / r.height) * 100}%`);
-    });
-  });
-}
-
-/* =========================================================
    Gentle parallax on the nature photo
    ========================================================= */
 const natureBand = document.querySelector(".nature-band");
