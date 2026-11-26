@@ -499,14 +499,31 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 .about-text > p { color: var(--ink-soft); font-size: 1.05rem; }
 
 .timeline-title { margin-top: 2.5rem; }
-.timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li {
-  display: grid; grid-template-columns: 5rem 1fr; gap: 1rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--line);
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1.9rem; position: relative; }
+/* the vertical line */
+.timeline::before {
+  content: ""; position: absolute; left: .45rem; top: .75rem; bottom: 1.5rem;
+  width: 2px; background: var(--sand-300); border-radius: 2px;
 }
-.timeline li:last-child { border-bottom: 1px solid var(--line); }
-.timeline .year { font-family: var(--font-head); font-weight: 700; color: var(--accent-text); font-size: 1.05rem; letter-spacing: -.01em; white-space: nowrap; }
+.timeline li { position: relative; padding: 0 0 1.6rem; }
+.timeline li:last-child { padding-bottom: 0; }
+/* the dot on the line */
+.timeline li::before {
+  content: ""; position: absolute; left: calc(-1.9rem + .45rem - 6px); top: .42rem;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--sand-100); border: 2px solid var(--accent);
+}
+.timeline li:first-child::before { background: var(--accent); }
+.timeline .year {
+  display: inline-block; margin-bottom: .5rem;
+  padding: .2rem .7rem; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--sand-300);
+  font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .02em;
+  color: var(--accent-text); white-space: nowrap;
+}
+.timeline .entry { display: block; }
+.timeline .entry strong { display: block; font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; letter-spacing: -.01em; line-height: 1.3; color: var(--green-900); }
+.timeline .entry span { display: block; margin-top: .2rem; color: var(--ink-soft); font-size: .97rem; }
 
 .courses { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
 .courses li {
