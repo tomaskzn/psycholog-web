@@ -111,7 +111,7 @@ const translations = {
     "off.s9": "Psychosomatické ťažkosti",
     "off.s10": "Stagnácia",
     "off.s11": "Coming-out a tranzícia",
-    "off.s12": "Nároky po narodení dieťaťa a v rodičovstve",
+    "off.s12": "Preťaženie v rodičovstve",
     "off.s13": "iné",
     "off.how.t": "Ako pracujem?",
     "contact.access": "Vstup do budovy je bezbariérový.",
