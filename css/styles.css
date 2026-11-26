@@ -844,3 +844,6 @@ html.locked .gate {
 .about-text > p:not(.eyebrow):not(.disclaimer),
 .process-first p,
 .journey p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: wrap; }
+
+/* Open Dialogue icon: two larger bubbles with a gap */
+.card-icon svg.icon-dialog { width: 34px; height: 34px; stroke-width: 1.45; }
