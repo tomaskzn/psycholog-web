@@ -837,6 +837,7 @@ html.locked .gate {
 .gate-error { min-height: 1.4em; margin: .75rem 0 0; color: #a33b2b; font-size: .9rem; font-weight: 500; }
 
 /* Long paragraphs justified – straight edges on both sides (headings, lists, form stay left) */
+.hero .lead,
 .collab-lead,
 .card p,
 #offerings .ethics-card p,
