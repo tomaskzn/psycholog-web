@@ -505,7 +505,10 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   content: ""; position: absolute; left: .45rem; top: .75rem; bottom: 1.5rem;
   width: 2px; background: var(--sand-300); border-radius: 2px;
 }
-.timeline li { position: relative; padding: 0 0 1.6rem; }
+.timeline li {
+  position: relative; padding: 0 0 1.6rem;
+  display: grid; grid-template-columns: 4.6rem 1fr; column-gap: .6rem; align-items: baseline;
+}
 .timeline li:last-child { padding-bottom: 0; }
 /* the dot on the line */
 .timeline li::before {
@@ -515,15 +518,15 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 }
 .timeline li:first-child::before { background: var(--accent); }
 .timeline .year {
-  display: inline-block; margin-bottom: .5rem;
+  display: inline-block; align-self: start; justify-self: start;
   padding: .2rem .7rem; border-radius: 999px;
   background: var(--surface); border: 1px solid var(--sand-300);
   font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .02em;
   color: var(--accent-text); white-space: nowrap;
 }
-.timeline .entry { display: block; }
-.timeline .entry strong { display: block; font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; letter-spacing: -.01em; line-height: 1.3; color: var(--green-900); }
-.timeline .entry span { display: block; margin-top: .2rem; color: var(--ink-soft); font-size: .97rem; }
+.timeline .entry { display: contents; }
+.timeline .entry strong { grid-column: 2; padding-top: .1rem; display: block; font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; letter-spacing: -.01em; line-height: 1.3; color: var(--green-900); }
+.timeline .entry span { grid-column: 2; display: block; margin-top: .2rem; color: var(--ink-soft); font-size: .97rem; }
 
 .courses { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
 .courses li {
@@ -563,22 +566,22 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 .journey h3 { color: var(--green-900); font-size: clamp(1.5rem, 3vw, 2rem); }
 .journey p { margin: 0; font-size: 1.08rem; max-width: 52rem; position: relative; }
 
-.info-tiles { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
-.tile {
+.info-tile {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.75rem;
-  display: flex; flex-direction: column;
-  transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out);
+  display: grid; gap: 1.5rem;
 }
+.info-item { display: flex; flex-direction: column; }
+.info-item + .info-item { border-top: 1px solid var(--line); padding-top: 1.5rem; }
 .tile-label { font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
 .tile-value {
   font-family: var(--font-head); font-weight: 800;
   font-size: clamp(2rem, 4vw, 2.6rem); letter-spacing: -.04em; line-height: 1.1;
   margin: .4rem 0 .9rem;
 }
-.tile p { margin: 0; color: var(--ink-soft); font-size: .93rem; }
+.info-item p { margin: 0; color: var(--ink-soft); font-size: .93rem; }
 
 .cancel-note {
   display: flex; gap: 1rem; align-items: flex-start;
@@ -719,7 +722,9 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   .situation-list { grid-template-columns: 1fr 1fr; }
   .situations { padding: 2.5rem; }
   :root { --gutter: 32px; --panel-gap: 16px; }
-  .info-tiles { grid-template-columns: repeat(3, 1fr); }
+  .info-tile { grid-template-columns: 1fr 1fr; gap: 0; padding: 2rem 0; }
+  .info-item { padding: 0 2rem; }
+  .info-item + .info-item { border-top: 0; border-left: 1px solid var(--line); padding-top: 0; }
   .offer-cards { grid-template-columns: repeat(2, 1fr); }
   .contact-cta { grid-template-columns: repeat(2, 1fr); }
   .field-row { flex-direction: row; }

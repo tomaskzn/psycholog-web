@@ -23,7 +23,7 @@ const translations = {
     "nav.menu": "Menu",
 
     "hero.eyebrow": "Psychologička",
-    "hero.lead": "Psychologické konzultácie s dospelými a dospievajúcimi, ktorí chcú podporiť svoje duševné zdravie.",
+    "hero.lead": "Psychologické konzultácie s dospelými a dospievajúcimi, ktorí chcú podporiť svoje duševné zdravie",
     "hero.cta1": "Objednať sa",
     "hero.cta2": "Ako pracujem",
     "hero.badge1": "Dospelí a dospievajúci",
@@ -72,9 +72,7 @@ const translations = {
     "proc.len.l": "Dĺžka",
     "proc.len.d": "Konzultácie obvykle trvajú 45–50 minút.",
     "proc.price.l": "Cena",
-    "proc.price.d": "Cena za individuálnu konzultáciu.",
-    "proc.online.l": "Online",
-    "proc.online.d": "Ponúkam aj online konzultácie. Podmienky sú rovnaké.",
+    "proc.price.d": "Cena za individuálnu konzultáciu osobne aj online.",
     "proc.cancel.l": "Zrušenie termínu",
     "proc.cancel.d": "Čas pre Vás je starostlivo plánovaný a vyhradený výlučne pre Vás. Dohodnutý termín je možné zrušiť najneskôr 48 hodín vopred telefonicky alebo e-mailom. Ak je rezervácia zrušená menej ako 48 h vopred, storno poplatok je 25 €.",
 
@@ -136,7 +134,7 @@ const translations = {
     "nav.menu": "Menu",
 
     "hero.eyebrow": "Psychologist",
-    "hero.lead": "Psychological counselling for adults and adolescents who wish to support their mental health.",
+    "hero.lead": "Psychological counselling for adults and adolescents who wish to support their mental health",
     "hero.cta1": "Book a session",
     "hero.cta2": "How I work",
     "hero.badge1": "Adults & adolescents",
@@ -185,9 +183,7 @@ const translations = {
     "proc.len.l": "Length",
     "proc.len.d": "Sessions usually last 45–50 minutes.",
     "proc.price.l": "Price",
-    "proc.price.d": "The fee for an individual session.",
-    "proc.online.l": "Online",
-    "proc.online.d": "I also offer online consultations. The terms and conditions are the same.",
+    "proc.price.d": "The fee for an individual session, in person or online.",
     "proc.cancel.l": "Cancellation",
     "proc.cancel.d": "Your appointment is carefully scheduled and reserved exclusively for you. You may cancel your appointment no later than 48 hours in advance by telephone or email. If the appointment is cancelled less than 48 hours in advance, a cancellation fee of €25 will apply.",
 

@@ -32,6 +32,17 @@ document.addEventListener("keydown", e => {
   }
 });
 
+// Logo always takes you back to the very top of the page
+document.querySelector(".logo").addEventListener("click", e => {
+  e.preventDefault();
+  setMenu(false);
+  window.scrollTo({ top: 0, behavior: reduceMotionPref() ? "auto" : "smooth" });
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+});
+function reduceMotionPref() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 window.matchMedia("(min-width: 1080px)").addEventListener("change", e => {
   if (e.matches) setMenu(false);
 });
