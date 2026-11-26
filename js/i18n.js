@@ -39,7 +39,7 @@ const translations = {
     "off.c1.t": "Jungiánska psychoterapia",
     "off.c1.d": "Môj prístup má korene v jungiánskej psychoterapii, ktorá pristupuje k vnútornému svetu človeka s úctou a kladie dôraz na rešpekt k vlastnej ceste každého z nás. Psychické a telesné symptómy chápe ako volanie duše vydať sa k hľadaniu rovnováhy medzi vonkajším a vnútorným. Prácu so symbolom využíva k hľadaniu dialógu medzi vedomým a nevedomým prežívaním.",
     "off.c2.t": "Otvorený dialóg",
-    "off.c2.d": "Školila som sa aj v prístupe Otvorený dialóg. Tento prístup namiesto zamerania na izolovaného človeka a jeho diagnózu vníma krízu ako udalosť, ktorá sa odohráva vo vzťahovom systéme (rodina, priatelia, komunita). V dialogických konverzáciách sa rodia nové pohľady a riešenia.",
+    "off.c2.d": "Školila som sa aj v prístupe Otvorený dialóg. Tento prístup nevníma ťažké psychické stavy len ako izolovanú poruchu jednotlivca, ale ako udalosť, ktorá sa odohráva vo vzťahovom systéme. Popri odbornom pohľade psychológa, či psychiatra je relevantný pohľad človeka v kríze, názor jeho blízkych, priateľov a členov komunity. V dialogických konverzáciách sa rodia nové pohľady a riešenia.",
     "off.ethics": "Som frekventantkou výcviku České společnosti pro analytickou psychologii, ktorý je certifikovaný Českou asociací pro psychoterapii. Som členkou Slovenskej spoločnosti analytickej psychológie. Riadim sa etickými princípmi Európskej asociácie pre psychoterapiu. Orientujem sa v problematike vekovej a genderovej rovnosti. Zaujímam sa o témy etnickej rovnosti, LGBTQ+ práv a problematiku klimatickej krízy.",
 
     "about.eyebrow": "O mne",
@@ -148,7 +148,7 @@ const translations = {
     "off.c1.t": "Jungian psychotherapy",
     "off.c1.d": "My approach is rooted in Jungian psychotherapy, which treats a person’s inner world with deep respect and emphasises understanding for each individual’s own journey. It understands psychological and physical symptoms as a call from the soul to set out in search of a balance between the external and the internal. It uses symbolic work to seek a dialogue between conscious and unconscious experiences.",
     "off.c2.t": "Open Dialogue",
-    "off.c2.d": "I have also received training in the Open Dialogue approach. Rather than focusing on the individual in isolation and his / her diagnosis, this approach views a crisis as an event that unfolds within a system of relationships (family, friends, community). New perspectives and solutions emerge from dialogic conversations.",
+    "off.c2.d": "I have also received training in the Open Dialogue approach. This approach does not see severe psychological states merely as an isolated disorder of the individual, but as an event that unfolds within a system of relationships. Alongside the professional view of a psychologist or psychiatrist, the perspective of the person in crisis and the views of their loved ones, friends and community members are also relevant. New perspectives and solutions emerge from dialogic conversations.",
     "off.ethics": "I am a trainee with the Czech Society for Analytical Psychology, a programme certified by the Czech Association for Psychotherapy. I am a member of the Slovak Society for Analytical Psychology. I adhere to the ethical principles of the European Association for Psychotherapy. I specialise in issues of age and gender equality. And I am interested in the issues of ethnic equality, LGBTQ+ rights and the climate crisis.",
 
     "about.eyebrow": "About me",
