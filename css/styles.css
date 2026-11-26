@@ -358,28 +358,7 @@ body.nav-open { overflow: hidden; }
 .section-head p:last-child { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0; max-width: 34rem; text-wrap: pretty; }
 
 /* Offerings */
-/* Intro panel: two columns split by a line, set apart from the cards below */
 h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
-.offer-intro {
-  display: grid;
-  margin-bottom: 2.5rem;
-}
-.offer-intro p {
-  margin: 0;
-  padding: 1.25rem 0;
-  font-family: var(--font-head);
-  font-weight: 500;
-  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
-  line-height: 1.4;
-  letter-spacing: -.015em;
-  color: var(--ink);
-  text-wrap: pretty;
-}
-.offer-intro p:first-child { padding-top: 0; }
-.offer-intro p + p {
-  border-top: 2px solid var(--accent);
-  color: var(--green-700);
-}
 .offer-cards { display: grid; gap: 1rem; }
 
 .card {
@@ -410,21 +389,6 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   transition: stroke .35s;
 }
 
-.offer-extra { display: grid; gap: 1rem; margin-top: 1rem; }
-.values-card {
-  background: var(--sage-soft);
-  color: var(--ink-soft);
-  border-radius: var(--radius);
-  padding: 2rem 1.75rem;
-}
-.values-card h3 {
-  color: var(--green-900);
-  font-size: clamp(1.45rem, 2.8vw, 1.9rem); font-weight: 600; line-height: 1.2;
-  margin-bottom: .9rem;
-}
-.values-card p { margin: 0; }
-.values-card .tags { margin: .25rem 0 1.5rem; }
-
 .ethics-card {
   background: var(--sand-200);
   border-radius: var(--radius);
@@ -449,6 +413,46 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   color: var(--green-900);
 }
 .tags-dark li:hover { background: var(--green-900); color: var(--surface); }
+
+/* 1 · O spolupráci */
+.collab-lead {
+  font-family: var(--font-head); font-weight: 500;
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem); line-height: 1.45; letter-spacing: -.015em;
+  color: var(--ink); max-width: 46rem; margin: 0 0 2.5rem; text-wrap: pretty;
+}
+.situations {
+  background: var(--sage-soft);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.situations h3 { color: var(--green-900); font-size: clamp(1.35rem, 2.6vw, 1.75rem); margin-bottom: 1.5rem; text-wrap: balance; }
+.situation-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem 2rem; }
+.situation-list li {
+  position: relative; padding: .55rem 0 .55rem 1.5rem;
+  border-bottom: 1px solid var(--sage);
+  color: var(--ink); font-size: 1.02rem;
+}
+.situation-list li::before {
+  content: ""; position: absolute; left: 0; top: 1.05rem;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+}
+.sub-title { color: var(--green-900); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.25rem; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
+.card h4 { font-family: var(--font-head); color: var(--green-900); font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; margin: 0 0 .75rem; }
+#offerings .ethics-card { margin-top: 1rem; }
+#offerings .ethics-card p { margin: 0; color: var(--ink-soft); }
+#offerings .disclaimer { margin: 1.5rem 0 0; font-size: .78rem; line-height: 1.55; color: #8a918a; max-width: 52rem; }
+
+/* 3 · Priebeh */
+.process-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
+.process-first h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); text-wrap: balance; }
+.process-first p { color: var(--ink-soft); font-size: 1.08rem; margin: 0; }
+.process-grid .journey { margin-bottom: 0; }
+
+/* 4 · Kontakt: single address */
+.address-single .access { display: flex; align-items: center; gap: .5rem; margin-top: 1rem; color: var(--green-700); font-weight: 500; font-size: .95rem; }
+.address-single .access svg { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--green-700); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.address-text span.access span { color: var(--green-700); }
 
 /* Nature band with quote */
 .nature-band {
@@ -695,6 +699,8 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
    Tablet ≥ 640px
    ========================================================= */
 @media (min-width: 640px) {
+  .situation-list { grid-template-columns: 1fr 1fr; }
+  .situations { padding: 2.5rem; }
   :root { --gutter: 32px; --panel-gap: 16px; }
   .info-tiles { grid-template-columns: repeat(3, 1fr); }
   .offer-cards { grid-template-columns: repeat(2, 1fr); }
@@ -712,15 +718,15 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
    Tablet landscape ≥ 860px
    ========================================================= */
 @media (min-width: 860px) {
+  .process-grid { grid-template-columns: 1fr 1.6fr; gap: 3rem; align-items: start; }
+  .address-single { display: grid; grid-template-columns: 1fr 1.6fr; }
+  .address-single .address-text { justify-content: center; padding: 2rem; }
+  .address-single .map { height: auto; min-height: 320px; }
   .section { padding: 7rem 0; }
   .about-grid { grid-template-columns: 5fr 7fr; gap: 4.5rem; }
   .about-photo { position: sticky; top: calc(var(--header-h) + 2rem); max-width: none; }
-  .offer-extra { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1.4fr 1fr; gap: 1.5rem; }
   .contact-grid .contact-cta { grid-template-columns: 1fr; }
-  .offer-intro { grid-template-columns: 1fr 1fr; margin-bottom: 3rem; }
-  .offer-intro p { padding: 0 2.5rem 0 0; }
-  .offer-intro p + p { border-top: 0; border-left: 2px solid var(--accent); padding: 0 0 0 2.5rem; }
   .journey { padding: 3rem; }
   .nature-band { min-height: 600px; }
 }
@@ -729,6 +735,8 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
    Desktop ≥ 1080px
    ========================================================= */
 @media (min-width: 1080px) {
+  .situation-list { grid-template-columns: repeat(3, 1fr); }
+  .situations { padding: 3rem; }
   .menu-toggle { display: none; }
   .main-nav {
     position: static; height: auto; padding: 0;
@@ -748,7 +756,8 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   .main-nav ul a::before { content: none; }
   .main-nav ul a:hover { color: var(--ink); background: rgba(20, 33, 26, .06); }
   .main-nav ul a.active { color: var(--surface); background: var(--green-900); }
-  .nav-cta { padding: .75rem 1.3rem; }
+  .nav-cta { padding: .75rem 1.3rem; white-space: nowrap; }
+  .main-nav ul a, .logo-text small { white-space: nowrap; }
   .site-header .header-inner { justify-content: flex-start; }
   .main-nav { margin-left: auto; }
   .header-actions { order: 3; }
@@ -770,4 +779,12 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; filter: none; }
+}
+
+/* Narrow desktops: keep the longer English nav on one line */
+@media (min-width: 1080px) and (max-width: 1239px) {
+  .main-nav { gap: 1rem; }
+  .main-nav ul { gap: 0; }
+  .main-nav ul a { padding: .55rem .7rem; font-size: .9rem; }
+  .nav-cta { padding: .7rem 1.1rem; }
 }
