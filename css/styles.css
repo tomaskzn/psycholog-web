@@ -466,23 +466,23 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 }
 .nature-img {
   position: absolute; inset: -40px 0; z-index: -2;
-  background: var(--green-700) url("../assets/nature.svg") center / cover no-repeat;
+  background: var(--green-700) url("../assets/nature.jpg") center 45% / cover no-repeat;
   will-change: transform;
 }
 .nature-band::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(13, 31, 21, 0) 20%, rgba(13, 31, 21, .75) 100%);
+  background: linear-gradient(180deg, rgba(13, 31, 21, 0) 60%, rgba(13, 31, 21, .6) 100%);
 }
-.nature-quote { margin: 0 auto; padding-block: 3rem; }
+.nature-quote { margin: 0 auto; padding-block: 0 1.75rem; }
 .nature-quote blockquote { margin: 0; }
 .nature-quote p {
   margin: 0;
-  font-family: var(--font-head); font-weight: 700;
-  font-size: clamp(1.8rem, 4.6vw, 3.4rem); line-height: 1.1; letter-spacing: -.03em;
+  font-family: var(--font-head); font-weight: 600;
+  font-size: clamp(1.15rem, 2.4vw, 1.75rem); line-height: 1.25; letter-spacing: -.015em;
   color: var(--surface);
-  max-width: 18em;
+  max-width: 26em; text-shadow: 0 1px 14px rgba(13, 31, 21, .45);
 }
-.nature-quote figcaption { margin-top: 1rem; color: var(--accent); font-weight: 600; letter-spacing: .06em; }
+.nature-quote figcaption { margin-top: .5rem; font-size: .9rem; color: var(--accent); font-weight: 600; letter-spacing: .06em; }
 
 /* About */
 .about-grid { display: grid; gap: 3rem; align-items: start; }
