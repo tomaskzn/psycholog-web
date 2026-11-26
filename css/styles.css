@@ -809,3 +809,29 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   .main-nav ul a { padding: .55rem .7rem; font-size: .9rem; }
   .nav-cta { padding: .7rem 1.1rem; }
 }
+
+/* =========================================================
+   Pre-launch login screen
+   ========================================================= */
+.gate { display: none; }
+html.locked body > :not(.gate) { display: none !important; }
+html.locked .gate {
+  display: grid; place-items: center;
+  min-height: 100vh; min-height: 100dvh; padding: 24px 16px;
+  background: linear-gradient(160deg, var(--sand-100) 0%, var(--sand-200) 100%);
+}
+.gate-card {
+  width: 100%; max-width: 380px;
+  background: var(--surface);
+  border: 1px solid var(--sand-300);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 20px 50px -30px rgba(22, 51, 34, .35);
+}
+.gate-card img { margin: 0 auto 1rem; border-radius: 12px; }
+.gate-title { font-family: var(--font-name); font-weight: 500; font-size: 1.7rem; color: var(--green-900); margin: 0 0 .5rem; }
+.gate-text { color: var(--ink-soft); font-size: .95rem; margin: 0 0 1.5rem; }
+.gate-card .field { text-align: left; margin-bottom: 1rem; }
+.gate-card .btn { margin-top: .5rem; }
+.gate-error { min-height: 1.4em; margin: .75rem 0 0; color: #a33b2b; font-size: .9rem; font-weight: 500; }

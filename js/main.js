@@ -1,4 +1,31 @@
 /* =========================================================
+   Pre-launch login (see GATE_HASH in index.html)
+   ========================================================= */
+const gateForm = document.querySelector(".gate-card");
+if (gateForm) {
+  const gateError = gateForm.querySelector(".gate-error");
+  const sha256 = async text => {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+  };
+  gateForm.addEventListener("submit", async e => {
+    e.preventDefault();
+    const user = gateForm.user.value.trim().toLowerCase();
+    const hash = await sha256(`${user}:${gateForm.pass.value}`);
+    if (hash === window.GATE_HASH) {
+      try { localStorage.setItem("gate", hash); } catch (err) { /* storage unavailable */ }
+      document.documentElement.classList.remove("locked");
+      window.scrollTo(0, 0);
+      window.dispatchEvent(new Event("scroll"));
+    } else {
+      gateError.textContent = t("gate.err");
+      gateForm.pass.value = "";
+      gateForm.pass.focus();
+    }
+  });
+}
+
+/* =========================================================
    Header: shadow on scroll + mobile menu
    ========================================================= */
 const header = document.querySelector(".site-header");

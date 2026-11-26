@@ -6,6 +6,8 @@
   <title>Mgr. Táňa Garajová, PhD. – psychologička</title>
   <meta name="description" content="Psychologické konzultácie s dospelými a dospievajúcimi. Jungiánsky prístup a Otvorený dialóg.">
   <meta name="theme-color" content="#f1eadc">
+  <!-- Pre-launch: keep search engines out. Remove when the site goes public. -->
+  <meta name="robots" content="noindex, nofollow">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mgr. Táňa Garajová, PhD. – psychologička">
@@ -19,10 +21,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Lora:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261126g">
-  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="css/styles.css?v=20261126h">
+  <script>
+    document.documentElement.classList.add("js");
+    // Pre-launch login: the page stays hidden until the right name + password are entered.
+    // Only a SHA-256 hash of "name:password" is stored here, never the password itself.
+    window.GATE_HASH = "989c521a2c126903edc1c7fe2bdb52047a21d74d09fa89b49d72b6dd4441fefb";
+    try { if (localStorage.getItem("gate") !== window.GATE_HASH) document.documentElement.classList.add("locked"); }
+    catch (e) { document.documentElement.classList.add("locked"); }
+  </script>
 </head>
 <body>
+  <!-- ============ PRE-LAUNCH LOGIN ============ -->
+  <div class="gate">
+    <form class="gate-card" novalidate>
+      <img src="assets/favicon.svg" width="48" height="48" alt="">
+      <p class="gate-title">Táňa Garajová</p>
+      <p class="gate-text" data-i18n="gate.text">Stránka sa pripravuje. Pre vstup zadajte prihlasovacie údaje.</p>
+      <div class="field">
+        <label for="gate-user" data-i18n="gate.user">Prihlasovacie meno</label>
+        <input id="gate-user" name="user" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+      </div>
+      <div class="field">
+        <label for="gate-pass" data-i18n="gate.pass">Heslo</label>
+        <input id="gate-pass" name="pass" type="password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="gate.btn">Vstúpiť</button>
+      <p class="gate-error" role="alert"></p>
+    </form>
+  </div>
+
   <a class="skip-link" href="#main" data-i18n="skip">Preskočiť na obsah</a>
 
   <!-- ============ HEADER ============ -->
@@ -319,7 +347,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20261126g"></script>
-  <script src="js/main.js?v=20261126g"></script>
+  <script src="js/i18n.js?v=20261126h"></script>
+  <script src="js/main.js?v=20261126h"></script>
 </body>
 </html>

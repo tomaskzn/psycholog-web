@@ -11,6 +11,12 @@ const translations = {
     "meta.title": "Mgr. Táňa Garajová, PhD. – psychologička",
     "meta.description": "Psychologické konzultácie s dospelými a dospievajúcimi. Jungiánsky prístup a Otvorený dialóg.",
 
+    "gate.text": "Stránka sa pripravuje. Pre vstup zadajte prihlasovacie údaje.",
+    "gate.user": "Prihlasovacie meno",
+    "gate.pass": "Heslo",
+    "gate.btn": "Vstúpiť",
+    "gate.err": "Nesprávne meno alebo heslo.",
+
     "skip": "Preskočiť na obsah",
     "logo.sub": "psychologické konzultácie",
     "nav.home": "Domov",
@@ -119,6 +125,12 @@ const translations = {
   en: {
     "meta.title": "Táňa Garajová, PhD – Psychologist",
     "meta.description": "Psychological counselling for adults and adolescents who wish to support their mental health. Jungian approach and Open Dialogue.",
+
+    "gate.text": "This website is being prepared. Please log in to continue.",
+    "gate.user": "Username",
+    "gate.pass": "Password",
+    "gate.btn": "Enter",
+    "gate.err": "Incorrect username or password.",
 
     "skip": "Skip to content",
     "logo.sub": "psychological consultations",
