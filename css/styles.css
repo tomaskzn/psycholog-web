@@ -246,19 +246,17 @@ a:hover { color: var(--accent-text); }
   overflow-y: auto;
 }
 .main-nav.open { opacity: 1; clip-path: inset(0 0 0 0); visibility: visible; }
-.main-nav ul { list-style: none; margin: 0; padding: 0; counter-reset: nav; }
+.main-nav ul { list-style: none; margin: 0; padding: 0; }
 .main-nav li + li { border-top: 1px solid rgba(255, 255, 255, .1); }
 .main-nav ul a {
   display: flex; align-items: baseline; gap: 1rem;
   padding: .9rem .25rem;
   font-family: var(--font-head); font-weight: 700; font-size: 2rem; letter-spacing: -.03em; line-height: 1.15;
   color: var(--surface); text-decoration: none;
-  counter-increment: nav;
 }
-.main-nav ul a::before {
-  content: "0" counter(nav);
-  font: 600 .8rem var(--font-body); color: var(--accent); letter-spacing: .05em;
-}
+/* Light button on the dark mobile menu so it stands out */
+.main-nav .nav-cta { background: var(--sand-100); color: var(--green-900); }
+.main-nav .nav-cta:hover { background: var(--surface); color: var(--green-900); }
 .main-nav ul a.active, .main-nav ul a:hover { color: var(--accent); }
 .main-nav.open li { animation: navIn .5s var(--ease-out) both; }
 .main-nav.open li:nth-child(2) { animation-delay: .05s; }
@@ -779,6 +777,8 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
   .main-nav ul a:hover { color: var(--ink); background: rgba(20, 33, 26, .06); }
   .main-nav ul a.active { color: var(--surface); background: var(--green-900); }
   .nav-cta { padding: .75rem 1.3rem; white-space: nowrap; }
+  .main-nav .nav-cta { background: var(--green-900); color: var(--sand-100); }
+  .main-nav .nav-cta:hover { background: var(--green-700); color: var(--sand-100); }
   .main-nav ul a, .logo-text small { white-space: nowrap; }
   .site-header .header-inner { justify-content: flex-start; }
   .main-nav { margin-left: auto; }

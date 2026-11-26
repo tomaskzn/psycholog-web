@@ -147,6 +147,12 @@ if (natureBand && natureImg && !reduceMotion) {
    Contact form (sent to her e-mail via FormSubmit)
    ========================================================= */
 const form = document.querySelector(".contact-form");
+// Endpoint is assembled here instead of sitting in the HTML, so simple bots
+// that scrape <form action> never find where to post.
+const FORM_ENDPOINT = ["https://formsubmit.co/ajax/", "t.sedlakova", "@", "gmail.com"].join("");
+// Quiet anti-spam: humans need at least a few seconds to fill the form in.
+const formShownAt = Date.now();
+const MIN_FILL_MS = 4000;
 const statusEl = form.querySelector(".form-status");
 const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -183,13 +189,23 @@ form.addEventListener("submit", async e => {
     return;
   }
 
+  // Bot check: filled the hidden field, or submitted impossibly fast.
+  // Pretend it worked so the bot learns nothing, but send nothing.
+  const looksLikeBot = form.querySelector('[name="_honey"]').value !== "" ||
+                       Date.now() - formShownAt < MIN_FILL_MS;
+  if (looksLikeBot) {
+    form.reset();
+    setStatus("form.ok", "ok");
+    return;
+  }
+
   submitBtn.disabled = true;
   submitBtn.dataset.i18n = "form.sending";
   submitBtn.textContent = t("form.sending");
   setStatus("");
 
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch(FORM_ENDPOINT, {
       method: "POST",
       body: new FormData(form),
       headers: { Accept: "application/json" }
