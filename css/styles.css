@@ -418,7 +418,7 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 .collab-lead {
   font-family: var(--font-head); font-weight: 500;
   font-size: clamp(1.2rem, 2.3vw, 1.55rem); line-height: 1.45; letter-spacing: -.015em;
-  color: var(--ink); max-width: 46rem; margin: 0 0 2.5rem; text-wrap: pretty;
+  color: var(--ink); margin: 0 0 2.5rem; text-wrap: pretty;
 }
 .situations {
   background: var(--sage-soft);
@@ -441,7 +441,7 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 .card h4 { font-family: var(--font-head); color: var(--green-900); font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; margin: 0 0 .75rem; }
 #offerings .ethics-card { margin-top: 1rem; }
 #offerings .ethics-card p { margin: 0; color: var(--ink-soft); }
-#offerings .disclaimer { margin: 1.5rem 0 0; font-size: .78rem; line-height: 1.55; color: #8a918a; max-width: 52rem; }
+#offerings .disclaimer { margin: 1.5rem 0 0; font-size: .78rem; line-height: 1.55; color: #8a918a; }
 
 /* 3 · Priebeh */
 .process-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
