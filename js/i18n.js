@@ -8,11 +8,11 @@
    ========================================================= */
 const translations = {
   sk: {
-    "meta.title": "Mgr. Táňa Garajová, PhD. – psychologička | Bratislava",
-    "meta.description": "Psychoterapeutické a psychologické konzultácie s dospelými a dospievajúcimi v Bratislave. Jungiánsky prístup a Otvorený dialóg.",
+    "meta.title": "Mgr. Táňa Garajová, PhD. – psychologička",
+    "meta.description": "Psychologické konzultácie s dospelými a dospievajúcimi. Jungiánsky prístup a Otvorený dialóg.",
 
     "skip": "Preskočiť na obsah",
-    "logo.sub": "psychologické / psychoterapeutické konzultácie",
+    "logo.sub": "psychologické konzultácie",
     "nav.home": "Domov",
     "nav.label": "Hlavná navigácia",
     "nav.offerings": "Ponúkam",
@@ -22,13 +22,12 @@ const translations = {
     "nav.cta": "Objednať sa",
     "nav.menu": "Menu",
 
-    "hero.eyebrow": "Psychologička · Bratislava",
-    "hero.lead": "Psychoterapeutické a psychologické konzultácie s dospelými a dospievajúcimi v Bratislave.",
+    "hero.eyebrow": "Psychologička",
+    "hero.lead": "Psychologické konzultácie s dospelými a dospievajúcimi.",
     "hero.cta1": "Objednať sa",
     "hero.cta2": "Ako pracujem",
     "hero.badge1": "Dospelí a dospievajúci",
     "hero.badge2": "Osobne aj online",
-    "hero.badge3": "Bratislava",
     "hero.portraitAlt": "Portrét – Mgr. Táňa Garajová, PhD.",
 
     "quote.label": "Citát",
@@ -36,7 +35,7 @@ const translations = {
     "quote.jung": "„Svet visí na vlásku a tým je ľudská duša.“",
 
     "off.eyebrow": "Ponúkam",
-    "off.lead": "Som psychologička a ponúkam individuálne konzultácie pod supervíziou pre dospelých a dospievajúcich v Bratislave.",
+    "off.lead": "Som psychologička a ponúkam individuálne konzultácie pod supervíziou pre dospelých a dospievajúcich.",
     "off.approach": "Môj prístup má korene v jungiánskej psychoterapii a smere Otvorený dialóg.",
     "off.c1.t": "Jungiánska psychoterapia",
     "off.c1.d": "Jungiánsky orientovaná psychoterapia pristupuje k vnútornému svetu človeka s hlbokou úctou a kladie dôraz na rešpekt k hľadaniu vlastnej cesty každého z nás. Duševné a telesné symptómy chápe ako volanie duše vydať sa k hľadaniu rovnováhy medzi vonkajším a vnútorným, k hľadaniu dialógu medzi vedomím a nevedomím.",
@@ -119,11 +118,11 @@ const translations = {
   },
 
   en: {
-    "meta.title": "Táňa Garajová, PhD – Psychologist | Bratislava",
-    "meta.description": "Psychotherapeutic and psychological consultations for adults and adolescents in Bratislava. Jungian approach and Open Dialogue.",
+    "meta.title": "Táňa Garajová, PhD – Psychologist",
+    "meta.description": "Psychological consultations for adults and adolescents. Jungian approach and Open Dialogue.",
 
     "skip": "Skip to content",
-    "logo.sub": "psychological / psychotherapeutic consultations",
+    "logo.sub": "psychological consultations",
     "nav.home": "Home",
     "nav.label": "Main navigation",
     "nav.offerings": "What I offer",
@@ -133,13 +132,12 @@ const translations = {
     "nav.cta": "Book a session",
     "nav.menu": "Menu",
 
-    "hero.eyebrow": "Psychologist · Bratislava",
-    "hero.lead": "Psychotherapeutic and psychological consultations for adults and adolescents in Bratislava.",
+    "hero.eyebrow": "Psychologist",
+    "hero.lead": "Psychological consultations for adults and adolescents.",
     "hero.cta1": "Book a session",
     "hero.cta2": "How I work",
     "hero.badge1": "Adults & adolescents",
     "hero.badge2": "In person & online",
-    "hero.badge3": "Bratislava",
     "hero.portraitAlt": "Portrait – Táňa Garajová, PhD",
 
     "quote.label": "Quote",
@@ -147,7 +145,7 @@ const translations = {
     "quote.jung": "“The world hangs on a thin thread, and that is the psyche of man.”",
 
     "off.eyebrow": "What I offer",
-    "off.lead": "I am a psychologist offering individual consultations under supervision for adults and adolescents in Bratislava.",
+    "off.lead": "I am a psychologist offering individual consultations under supervision for adults and adolescents.",
     "off.approach": "My approach is rooted in Jungian psychotherapy and the Open Dialogue approach.",
     "off.c1.t": "Jungian psychotherapy",
     "off.c1.d": "Jungian-oriented psychotherapy approaches a person's inner world with deep reverence and emphasises respect for each of us finding our own path. It understands mental and physical symptoms as a call of the soul to seek balance between the outer and the inner, and a dialogue between the conscious and the unconscious.",
