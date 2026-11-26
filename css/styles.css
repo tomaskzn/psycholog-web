@@ -699,7 +699,7 @@ h2.eyebrow { font-family: var(--font-body); line-height: 1.4; }
 }
 .emergency strong { color: var(--green-900); font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; }
 .emergency p { margin: .35rem 0 0; }
-.footer-legal { font-size: .75rem; line-height: 1.55; max-width: 52rem; margin-bottom: 2rem; color: #7a847c; }
+.footer-legal { font-size: .75rem; line-height: 1.55; margin-bottom: 2rem; color: #7a847c; }
 .footer-bottom { display: flex; flex-direction: column; gap: .25rem; font-size: .85rem; padding-top: 1.5rem; border-top: 1px solid var(--sage); }
 .footer-bottom p { margin: 0; }
 
@@ -835,3 +835,11 @@ html.locked .gate {
 .gate-card .field { text-align: left; margin-bottom: 1rem; }
 .gate-card .btn { margin-top: .5rem; }
 .gate-error { min-height: 1.4em; margin: .75rem 0 0; color: #a33b2b; font-size: .9rem; font-weight: 500; }
+
+/* Long paragraphs justified – straight edges on both sides (headings, lists, form stay left) */
+.collab-lead,
+.card p,
+#offerings .ethics-card p,
+.about-text > p:not(.eyebrow):not(.disclaimer),
+.process-first p,
+.journey p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: wrap; }

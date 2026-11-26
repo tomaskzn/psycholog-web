@@ -43,9 +43,9 @@ const translations = {
     "off.eyebrow": "O spolupráci",
     "off.lead": "Som psychologička a poskytujem individuálne konzultácie pod supervíziou pre tých dospelých a dospievajúcich, ktorí chcú podporiť svoje duševné zdravie. Pri spolupráci so mnou môžete počítať s bezpečným prostredím, prijatím a otvorenosťou.",
     "off.c1.t": "Jungiánska psychoterapia",
-    "off.c1.d": "Môj prístup má korene v jungiánskej psychoterapii, ktorá pristupuje k vnútornému svetu človeka s úctou a kladie dôraz na rešpekt k vlastnej ceste každého z nás. Psychické a telesné symptómy chápe ako volanie duše vydať sa k hľadaniu rovnováhy medzi vonkajším a vnútorným. Prácu so symbolom využíva k hľadaniu dialógu medzi vedomým a nevedomým prežívaním.",
+    "off.c1.d": "Môj prístup má korene v jungiánskej psychoterapii, ktorá pristupuje k vnútornému svetu človeka s úctou a kladie dôraz na rešpekt k vlastnej ceste každého z nás. Psychické a telesné symptómy chápe ako volanie duše vydať sa k hľadaniu rovnováhy medzi vonkajším a vnútorným. Na podporu dialógu medzi vedomým a nevedomým prežívaním využíva prácu so symbolom.",
     "off.c2.t": "Otvorený dialóg",
-    "off.c2.d": "Školila som sa aj v prístupe Otvorený dialóg. Tento prístup nevníma ťažké psychické stavy len ako izolovanú poruchu jednotlivca, ale ako udalosť, ktorá sa odohráva vo vzťahovom systéme. Popri odbornom pohľade psychológa, či psychiatra je relevantný pohľad človeka v kríze, názor jeho blízkych, priateľov a členov komunity. V dialogických konverzáciách sa rodia nové pohľady a riešenia.",
+    "off.c2.d": "Školila som sa aj v prístupe Otvorený dialóg. Tento prístup nevníma ťažké psychické stavy ako izolovanú poruchu jednotlivca, ale ako udalosť, ktorá sa odohráva vo vzťahovom systéme. Popri odbornom pohľade psychológa, či psychiatra je relevantný pohľad človeka v kríze, názor jeho blízkych, priateľov a členov komunity. V dialogických konverzáciách sa rodia nové pohľady a riešenia.",
     "off.ethics": "Som frekventantkou výcviku České společnosti pro analytickou psychologii, ktorý je certifikovaný Českou asociací pro psychoterapii. Som členkou Slovenskej spoločnosti analytickej psychológie. Riadim sa etickými princípmi Európskej asociácie pre psychoterapiu. Orientujem sa v problematike vekovej a genderovej rovnosti. Zaujímam sa o témy etnickej rovnosti, LGBTQ+ práv a problematiku klimatickej krízy.",
 
     "about.eyebrow": "O mne",
@@ -118,7 +118,7 @@ const translations = {
     "off.how.t": "Ako pracujem?",
     "contact.access": "Vstup do budovy je bezbariérový.",
     "footer.emTitle": "Potrebujete okamžitú pomoc?",
-    "footer.emText": "Neposkytujem akútnu krízovú pomoc. V prípade ohrozenia života volajte <a href=\"tel:112\">112</a> alebo nonstop <a href=\"tel:0800500333\">Linku dôvery 0800 500 333</a>.",
+    "footer.emText": "V prípade akútnej krízovej situácie kontaktujte <a href=\"tel:0800800566\">Linku Nezábudka 0800 800 566</a>.",
     "footer.rights": "Všetky práva vyhradené."
   },
 
@@ -158,9 +158,9 @@ const translations = {
     "off.eyebrow": "About our cooperation",
     "off.lead": "I am a psychologist and provide individual counselling under supervision for adults and adolescents who wish to support their mental health. When working with me, you can count on a safe environment, acceptance and openness.",
     "off.c1.t": "Jungian psychotherapy",
-    "off.c1.d": "My approach is rooted in Jungian psychotherapy, which treats a person’s inner world with deep respect and emphasises understanding for each individual’s own journey. It understands psychological and physical symptoms as a call from the soul to set out in search of a balance between the external and the internal. It uses symbolic work to seek a dialogue between conscious and unconscious experiences.",
+    "off.c1.d": "My approach is rooted in Jungian psychotherapy, which treats a person’s inner world with deep respect and emphasises understanding for each individual’s own journey. It understands psychological and physical symptoms as a call from the soul to set out in search of a balance between the external and the internal. To support a dialogue between conscious and unconscious experiences, it uses symbolic work.",
     "off.c2.t": "Open Dialogue",
-    "off.c2.d": "I have also received training in the Open Dialogue approach. This approach does not see severe psychological states merely as an isolated disorder of the individual, but as an event that unfolds within a system of relationships. Alongside the professional view of a psychologist or psychiatrist, the perspective of the person in crisis and the views of their loved ones, friends and community members are also relevant. New perspectives and solutions emerge from dialogic conversations.",
+    "off.c2.d": "I have also received training in the Open Dialogue approach. This approach does not see severe psychological states as an isolated disorder of the individual, but as an event that unfolds within a system of relationships. Alongside the professional view of a psychologist or psychiatrist, the perspective of the person in crisis and the views of their loved ones, friends and community members are also relevant. New perspectives and solutions emerge from dialogic conversations.",
     "off.ethics": "I am a trainee with the Czech Society for Analytical Psychology, a programme certified by the Czech Association for Psychotherapy. I am a member of the Slovak Society for Analytical Psychology. I adhere to the ethical principles of the European Association for Psychotherapy. I specialise in issues of age and gender equality. And I am interested in the issues of ethnic equality, LGBTQ+ rights and the climate crisis.",
 
     "about.eyebrow": "About me",
@@ -233,7 +233,7 @@ const translations = {
     "off.how.t": "My approach",
     "contact.access": "The building has wheelchair access.",
     "footer.emTitle": "Need immediate help?",
-    "footer.emText": "I do not provide acute crisis care. If a life is in danger, call <a href=\"tel:112\">112</a> or the 24/7 <a href=\"tel:0800500333\">Linka dôvery helpline 0800 500 333</a>.",
+    "footer.emText": "In an acute crisis, please contact the <a href=\"tel:0800800566\">Linka Nezábudka helpline 0800 800 566</a>.",
     "footer.rights": "All rights reserved."
   }
 };
